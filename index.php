@@ -3,19 +3,16 @@
 /**
  * Main template file
  * 
- * @package eptheme
+ * @package ayodoya
  */
 
- ?>
+get_header();
+?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wordpress Theme</title>
-</head>
-<body>
-    
-</body>
-</html>
+
+<div class="content">
+<h1>Welcome</h1>
+</div>
+
+<?php
+get_footer();
