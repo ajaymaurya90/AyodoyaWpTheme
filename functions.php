@@ -5,9 +5,24 @@
  * @package Ayodoya
  */
 
+use AYODOYA_THEME\Inc\AYODOYA_THEME;
+
+if(!defined('AYODOYA_DIR_PATH')){
+    define('AYODOYA_DIR_PATH', untrailingslashit(get_template_directory()));
+}
 // echo '<pre>';
-// print_r(filemtime(get_template_directory() . '/style.css'));
+// print_r(AYODOYA_DIR_PATH);
 // wp_die();
+
+require_once AYODOYA_DIR_PATH . '/inc/helpers/autoloader.php';
+
+function ayodoya_get_theme_instance(){
+    
+    AYODOYA_THEME::get_instance();
+}
+
+ayodoya_get_theme_instance();
+
 
  function ayodoya_enqueue_scripts(){
     // Register Style
