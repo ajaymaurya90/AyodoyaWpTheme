@@ -17,7 +17,8 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
 ?>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+  
+  <div class="container">
     <?php
     /**
      * Set logo through wordpress settings
@@ -25,9 +26,9 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
     $custom_logo_id = get_theme_mod('custom_logo');
     $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
     if (has_custom_logo()) {
-      echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
+      echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '" class="header-logo">';
     } else {
-      echo '<h1>' . get_bloginfo('name') . '</h1>';
+      echo '<h1 class="header-logo">' . get_bloginfo('name') . '</h1>';
     }
 
     ?>
@@ -72,4 +73,5 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
       </form>
     </div>
   </div>
+  
 </nav>
