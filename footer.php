@@ -7,7 +7,19 @@
  */
 ?>
 
-<footer>Footer</footer> 
+<footer>
+<div class="container">
+    <?php 
+        if(is_active_sidebar('sidebar-2')){
+            ?>
+            <aside>
+                <?php dynamic_sidebar('sidebar-2'); ?>
+            </aside>
+        <?php
+        }
+    ?>
+</div>
+</footer> 
 
 
 

@@ -25,3 +25,19 @@ img {
     max-width: 300px !important;
     height: auto;
 }
+
+/* Entry Meta */
+.updated:not(.published) {
+    display:none;
+}
+
+/* Nav Item */
+.nav-item:hover .dropdown-menu:not(.show) {
+    display: block;
+}
+
+/* Pagination */
+.page-numbers.current > span{
+    background-color: gray;
+    color: #fff;    
+}

@@ -36,7 +36,7 @@ use AYODOYA_THEME\Inc\Traits\Singleton;
 
     public function register_scripts(){
         // Register Script
-        wp_register_script('main-js', AYODOYA_DIR_URI . '/assets/main.js', [], filemtime(get_template_directory() . '/assets/main.js'), true);
+        wp_register_script('main-js', AYODOYA_DIR_URI . '/assets/main.js', ['jquery'], filemtime(get_template_directory() . '/assets/main.js'), true);
         wp_register_script('bootstrap-js', AYODOYA_DIR_URI . '/assets/src/library/js/bootstrap.min.js', ['jquery'], false, true);
         wp_register_script('bootstrap-bundle-js', AYODOYA_DIR_URI . '/assets/src/library/js/bootstrap.bundle.min.js', ['jquery'], false, true);
 
